@@ -31,6 +31,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 <br>
 <br>
 <hr>
+<br>
+<br>
 
 ## Instalando Dependências
 npm install 
