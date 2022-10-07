@@ -16,11 +16,12 @@ In the project directory, you can run:
 
 <hr>
 
-## Dependecies to install
+## Dependencies to install
 npm install json-server react-icons react-router-dom uuid
 
 ## React hooks that I learned until now:
 - useState;
 - useEffect;
 - useNavigate;
-- useLocation
+- useLocation;
+- useParmams;
