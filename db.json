@@ -1,46 +1,33 @@
 {
   "projects": [
     {
-      "name": "Teste2 Atualizadíssimo2",
-      "budget": "12500",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 3300,
-      "services": [
-        {
-          "name": "Mudar Infra",
-          "cost": "2500",
-          "description": "Infra em Camadas",
-          "id": "fb448a58-f744-4f22-adb2-be17abdb071f"
-        },
-        {
-          "name": "Contratar Dev Node.js",
-          "cost": "800",
-          "description": "Desenvolver função de envio de email",
-          "id": "d4f34554-0fdb-4cc9-9caa-ffa3bc06e0c1"
-        }
-      ],
-      "id": 2
-    },
-    {
       "name": "Projeto Atualizado",
       "budget": "1900",
       "category": {
         "id": "1",
         "name": "Infra"
       },
-      "cost": 1000,
+      "cost": 0,
+      "services": [],
+      "id": 4
+    },
+    {
+      "name": "Viagem Pipa 2023",
+      "budget": "2000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 500,
       "services": [
         {
-          "name": "App mobile",
-          "cost": "1000",
-          "description": "Tecnologia React Native",
-          "id": "a56e70d6-7050-4e15-9d99-11bfaab300d4"
+          "name": "Hospedagem",
+          "cost": "500",
+          "description": "Hostel dividido",
+          "id": "aa8f003c-38fa-4ad6-95a8-26721bb18d05"
         }
       ],
-      "id": 4
+      "id": 5
     }
   ],
   "categories": [
