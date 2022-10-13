@@ -7,13 +7,19 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 2500,
+      "cost": 3300,
       "services": [
         {
           "name": "Mudar Infra",
           "cost": "2500",
           "description": "Infra em Camadas",
           "id": "fb448a58-f744-4f22-adb2-be17abdb071f"
+        },
+        {
+          "name": "Contratar Dev Node.js",
+          "cost": "800",
+          "description": "Desenvolver função de envio de email",
+          "id": "d4f34554-0fdb-4cc9-9caa-ffa3bc06e0c1"
         }
       ],
       "id": 2
