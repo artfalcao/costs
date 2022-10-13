@@ -7,8 +7,15 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 2500,
+      "services": [
+        {
+          "name": "Mudar Infra",
+          "cost": "2500",
+          "description": "Infra em Camadas",
+          "id": "fb448a58-f744-4f22-adb2-be17abdb071f"
+        }
+      ],
       "id": 2
     },
     {
@@ -18,8 +25,15 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 1000,
+      "services": [
+        {
+          "name": "App mobile",
+          "cost": "1000",
+          "description": "Tecnologia React Native",
+          "id": "a56e70d6-7050-4e15-9d99-11bfaab300d4"
+        }
+      ],
       "id": 4
     }
   ],
