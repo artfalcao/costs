@@ -33,7 +33,7 @@ function App() {
 
           <Route path='/project/:id' element={<Project />} />
         </Routes>
-        </Container>
+      </Container>
 
         <Footer />
 
