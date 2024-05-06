@@ -1,18 +1,29 @@
+import '@testing-library/jest-dom/extend-expect';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom/extend-expect';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import {createMemoryHistory} from 'history'
 import Navbar from './Navbar';
 
 const renderNavbar = () => {
   render(
-    <Router>
+    <BrowserRouter>
       <Navbar />
-    </Router>
+    </BrowserRouter>
   );
 };
 
-describe('Navbar', () => {
+const renderNavbarWithRouter = () => {
+  const history = createMemoryHistory();
+  render(
+    <BrowserRouter history={history}>
+      <Navbar />
+    </BrowserRouter>
+  );
+  return history
+};
+
+describe('Navbar Component', () => {
   beforeEach(() => {
     renderNavbar();
   });
@@ -28,11 +39,23 @@ describe('Navbar', () => {
   });
 
   it('Link should change color on hover', async () => {
-    const linkItem = screen.getAllByRole('listitem')[0];
-    userEvent.hover(linkItem);
+    const linkItem = screen.getAllByRole('listitem');
+    linkItem.forEach(link => {
+      userEvent.hover(link);
+      waitFor(() => {
+        expect(link.closest('a')).toHaveStyle('color: #ffbb33');
+      });
+    })
+  });
+});
+
+describe('Navbar Redirects', () => {
+  it('Redirect to Projects Page', async () => {
+    let history = renderNavbarWithRouter();
+    const projectsLink = screen.getByText('Projetos');
+    userEvent.click(projectsLink);
     waitFor(() => {
-      expect(linkItem.closest('a')).toHaveStyle('color: #ffbb33');
+      expect(history.location.pathname).toBe('/projects');
     });
   });
-
-});
+})
