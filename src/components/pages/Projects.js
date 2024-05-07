@@ -7,14 +7,9 @@ import Container from "../layouts/Container"
 import LinkButton from "../layouts/LinkButton"
 import ProjectCard from "../project/ProjectCard"
 import Loading from "../layouts/Loading"
-
-
 import styles from './Projects.module.css'
 
-
-
 function Projects() {
-
     const [projects, setProjects] = useState([])
     const [removeLoading, setRemoveLoading] = useState(false)
     const [projectMessage, setProjectMessage] = useState('')
@@ -26,7 +21,6 @@ function Projects() {
     }
 
     useEffect(() => {
-
         fetch('http://localhost:5000/projects', {
             method: 'GET',
             headers: {
@@ -40,7 +34,6 @@ function Projects() {
             setRemoveLoading(true)
         })
         .catch((err) => console.log(err))
-
     }, [])
 
     function removeProject(id) {
@@ -84,7 +77,6 @@ function Projects() {
                     )}
             </Container> 
         </div>
-
     )
 }
 
